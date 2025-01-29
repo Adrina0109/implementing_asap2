@@ -1,5 +1,4 @@
 // src/components/Dashboard.jsx
-
 import React, { useState } from 'react';
 import MovieCard from './MovieCard';
 import { useNavigate } from 'react-router-dom';
@@ -17,7 +16,7 @@ const Dashboard = () => {
       genre: 'Science Fiction',
       releaseYear: 2010,
       synopsis: 'A thief who steals corporate secrets through dream-sharing technology is given the inverse task of planting an idea into the mind of a CEO.',
-      posterUrl: 'https://image.tmdb.org/t/p/original/xymM5aW6MDcH5AR9I3CamSegJd6.jpgg',
+      posterUrl: 'https://static.toiimg.com/photo/msid-6177430/6177430.jpg?57181',
     },
     {
       id: 2,
@@ -26,7 +25,7 @@ const Dashboard = () => {
       genre: 'Action',
       releaseYear: 1999,
       synopsis: 'A computer hacker learns about the true nature of his reality and his role in the war against its controllers.',
-      posterUrl: 'https://image.tmdb.org/t/p/original/dXNAPwY7VrqMAo51EKhhCJfaGb5.jpg',
+      posterUrl: 'https://upload.wikimedia.org/wikipedia/en/thumb/b/ba/Poster_-_The_Matrix_Reloaded.jpg/220px-Poster_-_The_Matrix_Reloaded.jpg',
     },
     // Add more movie objects as needed
   ]);
@@ -40,6 +39,11 @@ const Dashboard = () => {
         {movies.map((movie) => (
           <MovieCard key={movie.id} movie={movie} />
         ))}
+      </div>
+      <div>
+        <button onClick={() => navigate('/add-movie')} className="add-movie-btn">
+          Add Movie
+        </button>
       </div>
     </div>
   );
